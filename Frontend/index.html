@@ -21,6 +21,7 @@
       <div class="nav-links" id="navLinks">
         <a href="#home" class="nav-link active">Home</a>
         <a href="#issues" class="nav-link">Issues</a>
+        <a href="#city-map" class="nav-link">Map</a>
         <a href="#statistics" class="nav-link">Statistics</a>
         <a href="#about" class="nav-link">About</a>
       </div>
@@ -235,6 +236,236 @@
     </div>
   </section>
 
+  <!-- ░░░ AI ANALYSIS PANEL (shown after submit) ░░░ -->
+  <section class="ai-panel-section hidden" id="aiAnalysisSection">
+    <div class="container">
+      <div class="section-label">AI Engine</div>
+      <h2 class="section-title">Issue Analysis</h2>
+      <div class="ai-analysis-card glass-card">
+        <div class="ai-header">
+          <div class="ai-header-left">
+            <div class="ai-badge"><span class="badge-pulse"></span> AI Analysis Complete</div>
+            <h3 class="ai-issue-title" id="aiIssueTitle">Analysing your report...</h3>
+          </div>
+          <div class="ai-risk-score-ring" id="aiRiskRing">
+            <svg viewBox="0 0 80 80"><circle cx="40" cy="40" r="32" fill="none" stroke="rgba(255,255,255,0.06)" stroke-width="8"/><circle class="risk-ring-fill" id="riskRingFill" cx="40" cy="40" r="32" fill="none" stroke="#EF4444" stroke-width="8" stroke-linecap="round" stroke-dasharray="201" stroke-dashoffset="201" transform="rotate(-90 40 40)"/></svg>
+            <div class="ring-label"><span id="ringScore">0</span><small>/10</small></div>
+          </div>
+        </div>
+        <div class="ai-grid">
+          <div class="ai-field">
+            <span class="ai-field-label">Category</span>
+            <span class="ai-field-value" id="aiCategory">—</span>
+          </div>
+          <div class="ai-field">
+            <span class="ai-field-label">Severity</span>
+            <span class="ai-field-value" id="aiSeverity">—</span>
+          </div>
+          <div class="ai-field">
+            <span class="ai-field-label">Responsible Department</span>
+            <span class="ai-field-value" id="aiDept">—</span>
+          </div>
+          <div class="ai-field">
+            <span class="ai-field-label">Location Importance</span>
+            <span class="ai-field-value" id="aiLocImp">—</span>
+          </div>
+          <div class="ai-field">
+            <span class="ai-field-label">Community Confirmations</span>
+            <span class="ai-field-value" id="aiConfirm">0</span>
+          </div>
+          <div class="ai-field">
+            <span class="ai-field-label">Risk Score</span>
+            <span class="ai-field-value" id="aiRiskScore">—</span>
+          </div>
+        </div>
+        <div class="ai-summary-block">
+          <div class="ai-summary-label">🤖 AI Summary</div>
+          <p class="ai-summary-text" id="aiSummaryText">Awaiting analysis...</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ░░░ BEFORE / AFTER SECTION ░░░ -->
+  <section class="before-after-section" id="beforeAfter">
+    <div class="container">
+      <div class="section-label">Proof of Work</div>
+      <h2 class="section-title">Before &amp; After Repairs</h2>
+      <p class="section-sub">Visual evidence of every resolved issue. Zero claims without proof.</p>
+      <div class="ba-grid">
+        <!-- Card 1 -->
+        <div class="ba-card glass-card">
+          <div class="ba-images">
+            <div class="ba-img-wrap">
+              <div class="ba-img before-img" style="background:linear-gradient(135deg,#1a2340,#0f1628);">
+                <span style="font-size:2.5rem;">🕳️</span>
+                <div class="ba-img-label before-label">Before</div>
+              </div>
+              <div class="ba-arrow">→</div>
+              <div class="ba-img after-img" style="background:linear-gradient(135deg,#0f2820,#0a1f14);">
+                <span style="font-size:2.5rem;">🛣️</span>
+                <div class="ba-img-label after-label">After</div>
+              </div>
+            </div>
+          </div>
+          <div class="ba-meta">
+            <div class="ba-category">🛣️ Road Repair — Main Street, Sector 4</div>
+            <div class="ba-status-row">
+              <span class="ba-status-badge resolved">✓ Resolved</span>
+              <span class="ba-res-time">⏱ 3 Days</span>
+            </div>
+            <p class="ba-desc">Large pothole near City Hall completely resurfaced. Road levelled and marked. Verified by Road Department.</p>
+          </div>
+        </div>
+        <!-- Card 2 -->
+        <div class="ba-card glass-card">
+          <div class="ba-images">
+            <div class="ba-img-wrap">
+              <div class="ba-img before-img" style="background:linear-gradient(135deg,#1a1a0a,#2a2010);">
+                <span style="font-size:2.5rem;">🔦</span>
+                <div class="ba-img-label before-label">Before</div>
+              </div>
+              <div class="ba-arrow">→</div>
+              <div class="ba-img after-img" style="background:linear-gradient(135deg,#0f2010,#152a18);">
+                <span style="font-size:2.5rem;">💡</span>
+                <div class="ba-img-label after-label">After</div>
+              </div>
+            </div>
+          </div>
+          <div class="ba-meta">
+            <div class="ba-category">💡 Street Lighting — Model Town Market</div>
+            <div class="ba-status-row">
+              <span class="ba-status-badge resolved">✓ Resolved</span>
+              <span class="ba-res-time">⏱ 2 Days</span>
+            </div>
+            <p class="ba-desc">6 non-functional streetlights replaced. Market road now fully lit. Work completed ahead of schedule.</p>
+          </div>
+        </div>
+        <!-- Card 3 -->
+        <div class="ba-card glass-card">
+          <div class="ba-images">
+            <div class="ba-img-wrap">
+              <div class="ba-img before-img" style="background:linear-gradient(135deg,#1a100a,#2a180c);">
+                <span style="font-size:2.5rem;">🚯</span>
+                <div class="ba-img-label before-label">Before</div>
+              </div>
+              <div class="ba-arrow">→</div>
+              <div class="ba-img after-img" style="background:linear-gradient(135deg,#0f2820,#122014);">
+                <span style="font-size:2.5rem;">✨</span>
+                <div class="ba-img-label after-label">After</div>
+              </div>
+            </div>
+          </div>
+          <div class="ba-meta">
+            <div class="ba-category">🗑️ Waste Clearance — Sector 14 Park Gate</div>
+            <div class="ba-status-row">
+              <span class="ba-status-badge resolved">✓ Resolved</span>
+              <span class="ba-res-time">⏱ 1 Day</span>
+            </div>
+            <p class="ba-desc">Overflowing waste bins cleared and sanitised. Daily pickup schedule assigned to this area.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ░░░ CITY ISSUE MAP ░░░ -->
+  <section class="map-section" id="city-map">
+    <div class="container">
+      <div class="section-label">Spatial Intelligence</div>
+      <h2 class="section-title">City Issue Map</h2>
+      <p class="section-sub">Geo-tagged issues plotted across all civic zones. Real map integration ready.</p>
+      <div class="map-wrapper">
+        <div class="map-canvas glass-card" id="mapCanvas">
+          <!-- SVG pseudo-map -->
+          <svg class="map-grid-svg" viewBox="0 0 700 400" xmlns="http://www.w3.org/2000/svg">
+            <!-- Grid roads -->
+            <line x1="0" y1="133" x2="700" y2="133" stroke="rgba(255,255,255,0.06)" stroke-width="12"/>
+            <line x1="0" y1="266" x2="700" y2="266" stroke="rgba(255,255,255,0.06)" stroke-width="12"/>
+            <line x1="175" y1="0" x2="175" y2="400" stroke="rgba(255,255,255,0.06)" stroke-width="12"/>
+            <line x1="350" y1="0" x2="350" y2="400" stroke="rgba(255,255,255,0.06)" stroke-width="12"/>
+            <line x1="525" y1="0" x2="525" y2="400" stroke="rgba(255,255,255,0.06)" stroke-width="12"/>
+            <!-- Buildings blocks -->
+            <rect x="20" y="20" width="130" height="90" rx="6" fill="rgba(255,255,255,0.03)" stroke="rgba(255,255,255,0.05)" stroke-width="1"/>
+            <rect x="195" y="20" width="130" height="90" rx="6" fill="rgba(255,255,255,0.03)" stroke="rgba(255,255,255,0.05)" stroke-width="1"/>
+            <rect x="370" y="20" width="130" height="90" rx="6" fill="rgba(255,255,255,0.03)" stroke="rgba(255,255,255,0.05)" stroke-width="1"/>
+            <rect x="20" y="155" width="130" height="90" rx="6" fill="rgba(255,255,255,0.03)" stroke="rgba(255,255,255,0.05)" stroke-width="1"/>
+            <rect x="195" y="155" width="130" height="90" rx="6" fill="rgba(255,255,255,0.03)" stroke="rgba(255,255,255,0.05)" stroke-width="1"/>
+            <rect x="370" y="155" width="130" height="90" rx="6" fill="rgba(255,255,255,0.03)" stroke="rgba(255,255,255,0.05)" stroke-width="1"/>
+            <rect x="545" y="155" width="130" height="90" rx="6" fill="rgba(255,255,255,0.03)" stroke="rgba(255,255,255,0.05)" stroke-width="1"/>
+            <rect x="20" y="288" width="130" height="90" rx="6" fill="rgba(255,255,255,0.03)" stroke="rgba(255,255,255,0.05)" stroke-width="1"/>
+            <rect x="195" y="288" width="130" height="90" rx="6" fill="rgba(255,255,255,0.03)" stroke="rgba(255,255,255,0.05)" stroke-width="1"/>
+            <rect x="370" y="288" width="130" height="90" rx="6" fill="rgba(255,255,255,0.03)" stroke="rgba(255,255,255,0.05)" stroke-width="1"/>
+            <rect x="545" y="288" width="130" height="90" rx="6" fill="rgba(255,255,255,0.03)" stroke="rgba(255,255,255,0.05)" stroke-width="1"/>
+            <!-- Area labels -->
+            <text x="85" y="65" text-anchor="middle" fill="rgba(255,255,255,0.12)" font-size="9" font-family="Inter,sans-serif">SECTOR 3</text>
+            <text x="260" y="65" text-anchor="middle" fill="rgba(255,255,255,0.12)" font-size="9" font-family="Inter,sans-serif">SECTOR 4</text>
+            <text x="435" y="65" text-anchor="middle" fill="rgba(255,255,255,0.12)" font-size="9" font-family="Inter,sans-serif">SECTOR 5</text>
+            <text x="85" y="200" text-anchor="middle" fill="rgba(255,255,255,0.12)" font-size="9" font-family="Inter,sans-serif">GREEN PARK</text>
+            <text x="260" y="200" text-anchor="middle" fill="rgba(255,255,255,0.12)" font-size="9" font-family="Inter,sans-serif">MODEL TOWN</text>
+            <text x="435" y="200" text-anchor="middle" fill="rgba(255,255,255,0.12)" font-size="9" font-family="Inter,sans-serif">OLD CITY</text>
+            <text x="610" y="200" text-anchor="middle" fill="rgba(255,255,255,0.12)" font-size="9" font-family="Inter,sans-serif">WARD 7</text>
+            <text x="85" y="333" text-anchor="middle" fill="rgba(255,255,255,0.12)" font-size="9" font-family="Inter,sans-serif">SUBHASH NGR</text>
+            <text x="260" y="333" text-anchor="middle" fill="rgba(255,255,255,0.12)" font-size="9" font-family="Inter,sans-serif">SECTOR 14</text>
+            <!-- Markers — Red (High) -->
+            <circle cx="130" cy="133" r="10" fill="rgba(239,68,68,0.3)" class="map-pulse"/>
+            <circle cx="130" cy="133" r="6" fill="#EF4444"/>
+            <circle cx="320" cy="100" r="10" fill="rgba(239,68,68,0.3)" class="map-pulse"/>
+            <circle cx="320" cy="100" r="6" fill="#EF4444"/>
+            <circle cx="510" cy="200" r="10" fill="rgba(239,68,68,0.3)" class="map-pulse"/>
+            <circle cx="510" cy="200" r="6" fill="#EF4444"/>
+            <!-- Markers — Yellow (Medium) -->
+            <circle cx="230" cy="266" r="10" fill="rgba(245,158,11,0.3)"/>
+            <circle cx="230" cy="266" r="6" fill="#F59E0B"/>
+            <circle cx="460" cy="310" r="10" fill="rgba(245,158,11,0.3)"/>
+            <circle cx="460" cy="310" r="6" fill="#F59E0B"/>
+            <!-- Markers — Green (Resolved) -->
+            <circle cx="85" cy="200" r="8" fill="rgba(16,185,129,0.3)"/>
+            <circle cx="85" cy="200" r="5" fill="#10B981"/>
+            <circle cx="390" cy="266" r="8" fill="rgba(16,185,129,0.3)"/>
+            <circle cx="390" cy="266" r="5" fill="#10B981"/>
+            <circle cx="260" cy="155" r="8" fill="rgba(16,185,129,0.3)"/>
+            <circle cx="260" cy="155" r="5" fill="#10B981"/>
+          </svg>
+          <div class="map-overlay-label">📍 Rohtak City, Haryana — Live Issue Map</div>
+          <div class="map-zoom-hint">Full interactive map with real-time tracking — integration ready</div>
+        </div>
+        <div class="map-stats-panel">
+          <div class="map-legend">
+            <div class="ml-item"><span class="ml-dot" style="background:#EF4444;box-shadow:0 0 8px #EF4444;"></span> High Priority (3)</div>
+            <div class="ml-item"><span class="ml-dot" style="background:#F59E0B;box-shadow:0 0 8px #F59E0B;"></span> Medium Priority (2)</div>
+            <div class="ml-item"><span class="ml-dot" style="background:#10B981;box-shadow:0 0 8px #10B981;"></span> Resolved (3)</div>
+          </div>
+          <div class="map-stat-cards">
+            <div class="msc-item">
+              <div class="msc-val" style="color:#EF4444;">3</div>
+              <div class="msc-label">Critical Zones</div>
+            </div>
+            <div class="msc-item">
+              <div class="msc-val" style="color:#F59E0B;">2</div>
+              <div class="msc-label">Active Sites</div>
+            </div>
+            <div class="msc-item">
+              <div class="msc-val" style="color:#10B981;">3</div>
+              <div class="msc-label">Resolved</div>
+            </div>
+            <div class="msc-item">
+              <div class="msc-val" style="color:#06B6D4;">6</div>
+              <div class="msc-label">Total Mapped</div>
+            </div>
+          </div>
+          <div class="map-dept-list">
+            <div class="mdl-title">Departments Active</div>
+            <div class="mdl-row"><span class="mdl-dot road-dot"></span>Road Department <span class="mdl-count">3</span></div>
+            <div class="mdl-row"><span class="mdl-dot water-dot"></span>Water Dept. <span class="mdl-count">1</span></div>
+            <div class="mdl-row"><span class="mdl-dot elec-dot"></span>Electricity <span class="mdl-count">1</span></div>
+            <div class="mdl-row"><span class="mdl-dot waste-dot"></span>Sanitation <span class="mdl-count">1</span></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
   <!-- ░░░ RECENT ISSUES ░░░ -->
   <section class="issues-section" id="issues">
     <div class="container">
@@ -243,11 +474,24 @@
           <div class="section-label">Live Feed</div>
           <h2 class="section-title">Recent Issues</h2>
         </div>
-        <div class="filter-tabs">
-          <button class="filter-tab active" data-filter="all">All</button>
-          <button class="filter-tab" data-filter="reported">Reported</button>
-          <button class="filter-tab" data-filter="started">In Progress</button>
-          <button class="filter-tab" data-filter="completed">Completed</button>
+      </div>
+      <!-- Extended filter bar -->
+      <div class="filter-bar">
+        <div class="filter-group">
+          <span class="filter-group-label">Status</span>
+          <button class="filter-pill active" data-filter="all" data-type="status">All Issues</button>
+          <button class="filter-pill" data-filter="reported" data-type="status">Reported</button>
+          <button class="filter-pill" data-filter="started" data-type="status">In Progress</button>
+          <button class="filter-pill" data-filter="completed" data-type="status">Resolved</button>
+          <button class="filter-pill high-pill" data-filter="high" data-type="risk">🔴 High Priority</button>
+        </div>
+        <div class="filter-group">
+          <span class="filter-group-label">Category</span>
+          <button class="filter-pill" data-filter="road" data-type="category">🛣️ Road Damage</button>
+          <button class="filter-pill" data-filter="water" data-type="category">💧 Water Leakage</button>
+          <button class="filter-pill" data-filter="streetlight" data-type="category">💡 Streetlight</button>
+          <button class="filter-pill" data-filter="waste" data-type="category">🗑️ Garbage</button>
+          <button class="filter-pill" data-filter="electricity" data-type="category">⚡ Electricity</button>
         </div>
       </div>
 
@@ -476,6 +720,28 @@
       </div>
     </div>
   </footer>
+
+  <!-- ░░░ ISSUE DETAIL MODAL ░░░ -->
+  <div class="modal-overlay" id="issueModal">
+    <div class="modal-card issue-modal-card glass-card">
+      <button class="modal-close" id="issueModalClose">✕</button>
+      <div class="issue-modal-body" id="issueModalBody">
+        <!-- Dynamically populated -->
+      </div>
+    </div>
+  </div>
+
+  <!-- ░░░ AUTHORITY DASHBOARD HOOKS (hidden — for future use) ░░░ -->
+  <!-- data-authority-view="assigned-issues" -->
+  <!-- data-authority-view="change-status" -->
+  <!-- data-authority-view="upload-repair-image" -->
+  <!-- data-authority-view="mark-completed" -->
+  <div id="authorityDashboardRoot" class="hidden" data-dept="" data-token="" aria-hidden="true">
+    <div id="authViewAssigned"></div>
+    <div id="authViewStatus"></div>
+    <div id="authViewUpload"></div>
+    <div id="authViewComplete"></div>
+  </div>
 
   <!-- ░░░ LOGIN MODAL ░░░ -->
   <div class="modal-overlay" id="loginModal">
