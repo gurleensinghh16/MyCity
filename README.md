@@ -6,7 +6,7 @@
 
 This contains everything you need to run your app locally.
 
-View your app in AI Studio: https://ai.studio/apps/e7bc0511-0d48-42cc-8020-fa28188c4fa6
+View your app in AI : https://gurleensinghh16.github.io/MyCity/
 
 ## Run Locally
 
