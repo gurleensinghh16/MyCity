@@ -1,0 +1,6 @@
+{
+  "name": "MyCity",
+  "description": "An AI-powered civic transparency platform where citizens report infrastructure problems and authorities manage, track, and resolve them.",
+  "requestFramePermissions": ["geolocation"],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
